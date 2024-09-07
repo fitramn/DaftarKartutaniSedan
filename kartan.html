@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Pendaftaran Kartu Tani Kecamatan Sedan</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 50px;
+            background-color: #f4f4f4;
+        }
+        form {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        input, select, button {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        button {
+            background-color: #28a745;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #218838;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Form Pendaftaran</h2>
+    <form action="/submit" method="POST" enctype="multipart/form-data">
+        <!-- Nama -->
+        <label for="nama">Nama Lengkap:</label>
+        <input type="text" id="nama" name="nama" required>
+
+        <!-- NIK -->
+        <label for="nik">NIK:</label>
+        <input type="text" id="nik" name="nik" maxlength="16" required>
+
+        <!-- Tempat Lahir -->
+        <label for="tempat_lahir">Tempat Lahir:</label>
+        <input type="text" id="tempat_lahir" name="tempat_lahir" required>
+
+        <!-- Tanggal Lahir -->
+        <label for="tanggal_lahir">Tanggal Lahir:</label>
+        <input type="date" id="tanggal_lahir" name="tanggal_lahir" required>
+
+        <!-- Nama Ibu Kandung -->
+        <label for="nama_ibu">Nama Ibu Kandung:</label>
+        <input type="text" id="nama_ibu" name="nama_ibu" required>
+
+        <!-- No SPPT -->
+        <label for="no_sppt">Nomor SPPT:</label>
+        <input type="text" id="no_sppt" name="no_sppt" required>
+
+        <!-- Luas Lahan -->
+        <label for="luas_lahan">Luas Lahan (m²):</label>
+        <input type="number" id="luas_lahan" name="luas_lahan" required>
+
+        <!-- Upload Foto -->
+        <label for="foto">Upload Foto:</label>
+        <input type="file" id="foto" name="foto" accept="image/*" required>
+
+        <!-- Submit Button -->
+        <button type="submit">Daftar</button>
+    </form>
+
+</body>
+</html>
